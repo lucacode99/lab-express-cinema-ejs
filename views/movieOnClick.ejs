@@ -1,11 +1,22 @@
 <!-- display movie: title, Director(director: name surname), image, stars (ul), description, playing times-->
-<p>this page works</p>
+
+<img src="<%=movieToCheck.image %>" alt="movie picture">
+<h2> <%- movieToCheck.title %> </h1>
+<h3>Director: <%- movieToCheck.director %> </h3>
+<h4>Stars</h4>
+<ul>
+    <% for (let index = 0; index < movieToCheck.stars.length; index +=1 ) { %>
+        <li><%-movieToCheck.stars[index]%></li>
+    <% } %>
+</ul>
+
+<article> <%- movieToCheck.description %> </article>
+
+<p>
+    <% for (let index = 0; index < movieToCheck.showtimes.length; index +=1 ) { %>
+        <%-movieToCheck.showtimes[index]%> |
+    <% } %>
+</p>
 
 
-
-<% 
-
-
-
-%>
 

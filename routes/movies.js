@@ -17,6 +17,7 @@ router.get('/:id', (req, res, next) => {Movie
         .then(movieToCheck => {
             console.log("id-checker");
             res.render('movieOnClick', {movieToCheck});
+            console.log(movieToCheck)
           })
         .catch(error => "this didn't work"(error))
         });
