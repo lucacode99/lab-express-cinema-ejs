@@ -9,12 +9,17 @@ router.get('/', (req, res, next) => { Movie
             console.log (movies[index].title)
         }
         res.render('movies', {movies})
-    })
-    
-    
-    
-    
+    }) 
     });
+
+router.get('/:id', (req, res, next) => {Movie
+        .findById(req.params.id)
+        .then(movieToCheck => {
+            console.log("id-checker");
+            res.render('movieOnClick', {movieToCheck});
+          })
+        .catch(error => "this didn't work"(error))
+        });
 
 module.exports = router;
 

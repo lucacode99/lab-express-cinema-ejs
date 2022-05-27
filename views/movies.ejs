@@ -2,6 +2,5 @@
 <% for( let index = 0; index < movies.length; index +=1 ) { %>
     <h3><%-movies[index].title%></h3>
     <img src="<%=movies[index].image %>" height="200px">
-       
-    
+    <a href="/movies/<%= movies[index]._id%>">See more</a>   
 <% } %>
